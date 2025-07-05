@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: Nexus ai 
+    env: node
+    plan: free  
+    region: Sierra Leone 
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: .env
+        value: production
+    healthCheckPath: /  
+    autoDeploy: true  
